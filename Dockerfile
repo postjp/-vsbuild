@@ -19,9 +19,8 @@ RUN pacman -Syu --noconfirm && \
     pacman -Syu --noconfirm  make && \
     pacman -Syu --noconfirm  yarn && \
     pacman -Syu --noconfirm  jq && \
-    pacman -Syu --noconfirm  libxdmcp 
-    
-RUN pacman -Syu --noconfirm  gulp  
+    pacman -Syu --noconfirm  libxdmcp && \
+    pacman -Syu --noconfirm  gulp  
 
 
 # setup user build
@@ -36,5 +35,5 @@ RUN git clone https://github.com/postjp/nvm.git  && \
     makepkg --noconfirm -rsi --install  && \
     cd && \
     cp /PKGBUILD /home/build/   && \
-    cp /vscodium.desktop /home/build/  
-
+    cp /vscodium.desktop /home/build/ && \
+    makepkg --noconfirm -rs
