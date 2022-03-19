@@ -36,6 +36,6 @@ RUN git clone https://github.com/postjp/nvm.git  && \
     makepkg --noconfirm -rsi --install  && \
     cd && \
     cp /PKGBUILD /home/build/   && \
-    cp /vscodium.desktop /home/build/   && \ 
-    makepkg --noconfirm -rs
+    cp /vscodium.desktop /home/build/  
+RUN makepkg --noconfirm -rs
 
